@@ -8,7 +8,7 @@ const newTodos = [...todos]
 function sortBy(key) {
   return newTodos.sort((a, b) => (a[key] > b[key] ? 1 : (a[key] < b[key] ? -1 : 0)));
 }
-  
+
   console.log(sortBy('id'));
   /*
   [
@@ -18,7 +18,7 @@ function sortBy(key) {
   ]
   */
   console.log(sortBy('content'));
-  console.log(todos);
+
   /*
   [
     { id: 2, content: 'CSS', completed: true },
