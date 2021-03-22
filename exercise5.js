@@ -4,10 +4,16 @@ let todos = [
     { id: 1, content: 'Javascript', completed: false }
   ];
   
-  function removeTodo(id) {
-  
+  function removeTodo(key) {
+    let a = todos.filter(todo => todo.id !== key);
   }
   
+
+function removeTodo(key) {
+    todos = todos.filter(todo => todo.id !== key);
+
+}
+
   removeTodo(2);
   
   console.log(todos);
