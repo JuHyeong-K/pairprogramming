@@ -4,12 +4,11 @@ const todos = [
     { id: 1, content: 'Javascript', completed: false }
   ];
   
-  const newtodos = [...todos]
+const newTodos = [...todos]
+function sortBy(key) {
+  return newTodos.sort((a, b) => (a[key] > b[key] ? 1 : (a[key] < b[key] ? -1 : 0)));
+}
 
-  function sortBy(key) {
-    return newtodos.sort((a, b) => (a[key] > b[key] ? 1 : (a[key] < b[key] ? -1 : 0)));;
-  }
-  
   console.log(sortBy('id'));
   /*
   [
@@ -19,6 +18,7 @@ const todos = [
   ]
   */
   console.log(sortBy('content'));
+
   /*
   [
     { id: 2, content: 'CSS', completed: true },
