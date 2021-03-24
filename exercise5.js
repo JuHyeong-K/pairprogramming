@@ -6,8 +6,8 @@ let todos = [
 
 function removeTodo(key) {
     todos = todos.filter(todo => todo.id !== key);
-}
 
+  }
   removeTodo(2);
   
   console.log(todos);

@@ -4,19 +4,14 @@ const todos = [
     { id: 1, content: 'Javascript', completed: false }
   ];
   
-//   function getValues(key) {
-//     let array = [...todos];
-//     let answer = []
-//         for (let i = 0; i < array.length; i++){
-//             answer.push(array[i][key]);
-//         } ;
-//     return answer;
-//   }
-  
+
   function getValues(key) {
+    // 대괄호 표기법 안에는 문자로 평가되는 식별자도 사용 가능하다.
       return todos.map(todo=>todo[key])
   } 
-
+  
+// 화살표 함수로만
+const getValues = key => todos.map(todo => todo[key])
 
 
 

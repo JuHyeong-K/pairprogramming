@@ -5,7 +5,11 @@ let todos = [
   ];
   
   function countCompletedTodos() {
-    return todos.filter(todo => todo.completed).length;
+    // 가독성이 최고
+    return todos.filter(todo => todo.completed).length
+
+    // 굳이 reduce를 사용하지 않아도 된다.
+    return todos.reduce((acc,cur) => cur.completed ? acc+= 1 : acc, 0 );
   }
   
   console.log(countCompletedTodos()); // 1
